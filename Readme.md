@@ -2,12 +2,11 @@
 
 ## About The Project
 
-Use a Bluetooth PS3 game controller to jog/control a GRBL based CNC like [https://github.com/bdring/FluidNC](FluidCNC).
+Use a Bluetooth PS3 game controller to jog/control a GRBL based CNC like [Grbl_Esp32](https://github.com/bdring/Grbl_Esp32) or [FluidCNC](https://github.com/bdring/FluidNC).
 
-With Arduino the ESP32 will crash if Bluetooth and WIFI are connected at the same time. This ESP32 connects to a Game pad and then sends out jog commands etc. over the serial port.
+With Arduino the ESP32 will crash if Bluetooth and WIFI are connected at the same time. This ESP32 connects to a Bluetooth game controller and then sends out jog commands etc. over the serial port.
 
 The USB UART pins of the target GRBL can be shared. E.g. connect to GPIO1 and GPIO3 of ESP32 running GRBL.
-
 
 ## Controls
 
@@ -29,3 +28,7 @@ The USB UART pins of the target GRBL can be shared. E.g. connect to GPIO1 and GP
 | square | ZERO_X |
 | triangle | ZERO_Y |
 | cross | ZERO_Z |
+
+## Libraries
+
+Needs [jvpernis/esp32-ps3](https://github.com/jvpernis/esp32-ps3) library.
