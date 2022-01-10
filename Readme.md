@@ -6,7 +6,7 @@ Use a Bluetooth PS3 game controller to jog/control a GRBL based CNC like [Grbl_E
 
 With Arduino the ESP32 will crash if Bluetooth and WIFI are connected at the same time. This ESP32 connects to a Bluetooth game controller and then sends out jog commands etc. over the serial port.
 
-The USB UART pins of the target GRBL can be shared. E.g. connect to GPIO1 and GPIO3 of ESP32 running GRBL.
+The USB UART pins of the target GRBL can be shared on ESP32 boards like Lolin32. E.g. connect to GPIO_1 and GPIO_3 of ESP32 running GRBL.
 
 ## Controls
 
@@ -28,6 +28,13 @@ The USB UART pins of the target GRBL can be shared. E.g. connect to GPIO1 and GP
 | square | ZERO_X |
 | triangle | ZERO_Y |
 | cross | ZERO_Z |
+
+## Hardware Setup
+
+* Connect Jogger RXD GPIO_16 to GRBL ESP32 GPIO_1 (USB TXD)
+* Connect Jogger TXD GPIO_17 to GRBL ESP32 GPIO_3 (USB RXD)
+* Connect common ground
+* Connect common +5V or 3.3V
 
 ## Libraries
 
